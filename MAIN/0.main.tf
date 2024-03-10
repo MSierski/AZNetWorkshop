@@ -10,6 +10,6 @@ terraform {
     resource_group_name  = "tfStateRG"
     storage_account_name = "tfstatemeritoms"
     container_name       = "tfstate1"
-    key                  = "tfstate.tf"
+    key                  = "tfstateAZ.tf"
   }
 }
