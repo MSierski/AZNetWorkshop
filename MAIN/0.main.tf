@@ -5,12 +5,11 @@ provider "azurerm" {
   features {}
 }
 
-#TODO
-#terraform {
-#  backend "azurerm" {
-#    storage_account_name = "<ACCOUNT NAME>" 
-#    container_name       = "<CONTAINER>" 
-#    key                  = "cloudeng.shared.terraform.tfstate"  
-#    access_key  = 
-#  }
-#}
+terraform {
+   backend "azurerm" {
+    resource_group_name  = "tfStateRG"
+    storage_account_name = "tfstatemeritoms"
+    container_name       = "tfstate1"
+    key                  = "tfstateAZ.tf"
+  }
+}
