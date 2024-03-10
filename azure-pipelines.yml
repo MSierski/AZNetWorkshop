@@ -3,7 +3,7 @@ pool:
 
 steps:
   - task: TerraformTaskV4@4
-    name: Terraform Init
+    name: TerraformInit
     inputs:
       provider: 'azurerm'
       command: 'init'
@@ -14,7 +14,7 @@ steps:
       backendAzureRmKey: 'tfstateAZ.tf'
 
   - task: TerraformTaskV4@4
-    name: Terraform Apply
+    name: TerraformApply
     inputs:
       provider: 'azurerm'
       command: 'apply'
