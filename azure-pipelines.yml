@@ -7,6 +7,7 @@ steps:
     inputs:
       provider: 'azurerm'
       command: 'init'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/MAIN'
       backendServiceArm: 'Azure for Students(765fafc4-2412-45d4-9c7d-743e5bcd907b)'
       backendAzureRmResourceGroupName: 'tfStateRG'
       backendAzureRmStorageAccountName: 'tstatemeritoms'
@@ -18,4 +19,5 @@ steps:
     inputs:
       provider: 'azurerm'
       command: 'apply'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/MAIN'
       environmentServiceNameAzureRM: 'Azure for Students(765fafc4-2412-45d4-9c7d-743e5bcd907b)'
